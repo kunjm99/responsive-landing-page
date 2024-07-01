@@ -1,0 +1,94 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(15deg,rgb(240, 128, 128));
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1d84c9;
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-item {
+    padding: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #fbff07; /* Tomato color on hover */
+}
+
+.scrolled {
+    background-color: #454545; /* Darker background when scrolled */
+}
+
+/* Content Sections */
+.content {
+    padding-top: 10px; /* Add padding to prevent content from being hidden behind navbar */
+}
+
+
+.section {
+    display: none;
+    padding: 50px;
+    margin: 100px 0;
+    background: linear-gradient(150deg,rgb(240, 128, 128));
+
+}
+
+.section.active {
+    display: block;
+}
+
+#home {
+    background-color: lightcoral;
+    background: linear-gradient(rgb(240, 128, 128));
+}
+
+#about {
+    background-color:rgb(13, 170, 170);
+}
+
+#services {
+    background-color:wheat;
+}
+
+#contact {
+    background-color:plum;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        padding: 10px;
+    }
+}
